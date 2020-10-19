@@ -5,7 +5,7 @@
 	<meta charset="UTF-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Python</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
   
 <body>    
@@ -52,31 +52,221 @@ print('Python is awesome!')</pre>
 <pre>print(4 + 4)</pre> <p>no "" quotation marks are for strings.</p>
 
 
+<img src="assets/img/operator.png" alt="operators">
+
+
+<h3>challenge: operators
+</h3>
+
+<p>Now that you know how to use the print() function, let's explore some of the other things Python can do. In Python, you can write your own functions, too! You do this using the def keyword (short for "define"). We'll cover this in more detail later, but for now just remember that each function will start by being defined with the def keyword, and should have a return statement at the end, which defines what its output will be.
+
+Remember that python can do arithmetic too! To demonstrate this, we've written a small function, do_math(), which currently returns nothing.</p>
+
+<h3>using functions: WE USE THE DEF keyword.</h3>
+
+<pre># Change "None" on line 5 to make this function 
+# return some arithmetic that results in 8
+
+def do_math():
+    return 4 +4
+    
+# This line will call (execute) the function when you click "run":
+print(do_math())</pre>
+
+<h3>Bonus using modulo</h3>
+
+<pre>def do_math():
+    return 8 % 3 +6
+    
+# This line will call (execute) the function when you click "run":
+print(do_math())</pre>
 
 
 
+<img src="assets/img/bonus.png" alt="">
+
+
+<h3>Arithmetic operators</h3>
+
+<p>The symbols that we used in the previous examples should look pretty similar to what we are familiar with from the maths that we learned in school. We call these symbols operators, and on each side of the operator, we have operands. Operators perform operations on operands. For example, 5 * 53. Here we are using the multiplication operator * on the operands 5 and 53.</p>
+
+
+<img src="assets/img/arithmetic.png" alt="">
+
+<p>n addition to the four operators we looked at previously, we also have the following:
+
+
+**    %    //
+
+We’ll leave Floor Division aside for now, and we’ll come back to it later in this lesson. Let’s take a look at the exponent and modulo operators. Exponent means to the power of. 5 ** 5 would be 5 to the power of 5. Which is the same as writing 5 * 5 * 5 * 5 * 5. Similarly, 2 ** 3 would result in 8 as 2 multiplied by 2 is 4 and 4 multiplied by 2 is 8.</p>
+
+<h4>example</h4>
+<pre>print(2 ** 3)</pre>
+
+<h4>modulo</h4>
+<p>
+The modulo operator will divide the first number by the second and return the remainder. If we have 5 / 5, the answer will be 1 but if we were to use 5 % 5 then the answer would be 0. Similarly, if we had 18 % 7 the answer would be 4 because 7 goes into 18 twice (7 + 7 = 14) with a remainder of 4 (18 – 14 = 4).</p>
+
+<h4>modulo example</h4>
+
+<pre>print(18 % 7)
+
+returns 4
+</pre>
+
+<p>The modulo operator can be used when we need to find out if numbers are odd or even, and we would also it use when working with time. If we wanted to convert minutes into hours and minutes. For example, we know that there are 60 minutes in an hour so if we wanted to figure out how many minutes are leftover once we convert 10900 minutes into hours we would use 10900 % 60</p>
+
+
+<h4>modulo</h4>
+<img src="assets/img/modul02.png" alt="">
+
+<h5>question: 5*7 is equal to 5 * 5 * 5 * 5 * 5 * 5 * 5 </h5>
+
+
+<h3>Operator Precedence</h3>
+
+<img src="assets/img/bemdas.png" alt="">
+
+<p>Creating a mathematical expression comprised of various operators will be subject to the operator precedence set of rules. These rules are used heavily in algebra. When working with a compound expression that is made up of multiple simpler expressions chained together, we need a way to determine which operations receive precedence. This operator precedence is determined using the BEMDAS order, which stands for Brackets, Exponents, Multiplication and Division, Addition and Subtraction. It is also sometimes referred to as BOMDAS, where the O stands for Orders.</p>
+
+
+<h3>for example</h3>
+<pre>
+
+print((1 + 1) ** 3)
+
+</pre>
+
+<p>equating too... add the brackets first then exponent. <br> So meaning 2 to the power of 3 which equals 8</p>
+
+<img src="assets/img/bemdas2.png" alt="">
 
 
 
+<h2>Python variables</h2>
+
+<p>Variables are analogous to “boxes” that we can use to store, modify and reference values in a computer program <br>Allows us to give our values meaning, as well as the ability to recall those values whenever needed <br>How do you use it?
+
+Use variables to build up the data necessary for your computer program and persist it in memory</p>
+
+<h3>Fortunately, computers are much more than just fancy calculators. Computers have a hardware component called RAM (Random Access Memory). RAM is a storage medium for computers. Unlike a hard drive, RAM is volatile so any data stored in RAM will be lost after the computer has been shut down. RAM is used to store any data that is used by a computer program when it is running (also known as “being executed”). Not only do variables allow us to persist data that we may need for our program in memory, but it also allows us to provide meaningful names for the data that we’re storing. A variable acts as a placeholder in memory for a piece of data. The value of the data is stored in that placeholder. We can then use the name of that variable as a reference to that location in memory. Let’s try to create a variable now.</h3>
+
+<h3>example of a variable in Python</h3>
+
+<pre> my_number = 5
+print(my_number)</pre>
+
+
+<h3>naming conventions</h3>
+
+<p>Throughout an application, we can create as many variables as we need. Although, there are a couple of rules that need to be followed when creating a variable. Variable names must start with a regular letter (lower or upper-case), and all further characters should be either letters or digits or underscores. There are many different ways in which we can name a variable. Some of the following can be used:</p>
+
+<p>PEP8 recommends using lowercase variable names and any variable names that contain spaces should use underscores as spaces.</p>
 
 
 
+<h3> Variables & Arithmetic
+</h3>
+
+<p>The means of storing and access values in variables using placeholder names <br>Allows us to build up more complex expressions by giving our operands more meaningful names <br>How do you use it?
+
+Combine operators with variable based operands to perform arithmetic operations</p>
+
+
+<pre>print(first_number + second_number)</pre>
+
+<p>Now we’re just adding the values contained in two variables together. Notice how we’re adding two numbers together inside the function’s parentheses. Pieces of code that need to be evaluated are known as expressions Any expressions that we write inside of a function’s parentheses will be evaluated before the print function is invoked. The expression is evaluated, and the output is 15 meaning that 15 will be printed out.</p>
+
+<h3> Variable Reassignment - Part One
+</h3>
+<p>The ability to overwrite existing variables <br>Allows us to make modifications to existing variables <br>we achieve this By merely using the same syntax that we used to declare the variable!</p>
+
+<p>We know that when we declare a variable called my_number and then print it out, it will print out the value stored in that variable. Watch what happens when we declare a second variable called my_number and print out the value.</p>
+
+<pre>
+my_number = 5
+
+my_number = 10
+
+print(my_number)
+</pre>
+
+<p>results in printing out 10 <br>This time the output is 10. This is called variable reassignment. We use the variable name of my_variable to reference the value stored in that same memory location and update it accordingly. Then by the time that we pass the variable to the print function to value of my_variable has been updated to the value of 10. Therefore we can re-assign values to a variable as we choose.</p>
+
+
+<h3> Variable Reassignment - Part Two
+
+</h3>
+
+<img src="assets/img/addmod.png" alt="">
+
+<p>The ways these operators work is by combining the arithmetic operator with the = assignment operator, as in the image to the left. We can use these operators for some shorthand operations.</p>
+
+<h4>example</h4>
+
+<img src="assets/img/addingprint.png" alt="">
+
+
+<p>Here we’ve declared two variables. Then we have decided to use the addition and operator to add the value from variable_two to variable_one and assign the result to variable_one, which is 13. Notice how variable_two isn’t affected by this operation. This same logic can be used with all of the other arithmetic operators. Try out the different operators in the above Repl.it session.</p>
+
+
+<h3>Challenge</h3>
+<p>Variables - Required:
+In the Variables unit of the Numbers, Operators, Variables & Types lesson you learned that in Python, you can assign values to a variable, which is like a container to hold your value in the computer's memory. Then, you can access that same value by accessing the variable. 
+
+Here we've defined a small function, motivation(), which returns a variable called quote. The only problem is that quote hasn't been defined!
+
+Your challenge is to:
+Define quote by assigning it the following value:
+
+The secret of getting ahead is getting started.
+</p>
+
+<h3>answer</h3>
+<pre>def motivation():
+    # Define the quote variable here
+    quote = "The secret of getting ahead is getting started."
+    return quote
+    
+# Sample function call:
+print(motivation())
+</pre>
 
 
 
+<h3>Types of numbers</h3>
+<p>A means of categorising our data
+
+<br>What does it do?
+
+Provides a simple structure to the data that we store in memory <br>How do you use it?
+
+By declaring variables!</p>
+
+<p>integers or floats</p>
+
+<p>In Python, there are two different types of numbers that we work with on a regular basis. Up until now, we’ve mostly been looking at whole numbers. In mathematical terms, these numbers are usually integers. In computer programming, however, an integer is called an int for short. The other type of numbers that Python offers is a floating point number, or float for short. A float is a number that is followed by a decimal point. For example, a float might look like 12.74 whereas an int might be just12 or 13, depending on whether you choose to round up or not!</p>
+
+<h2> int full numbers float loads of decimal places</h2>
+
+<p>The reason that we need to differentiate between the two different types of numbers is so that Python can inform the computer of how much memory will need to be allocated to store that value because ints require more memory than floats. Thankfully Python will mostly work within the confines of these two types of numbers; unlike other languages such as Java or C#, which have small ints, long ints, doubles and many more! Also, in a language like Java or C#, we would have to specify the type of variable that you wish to declare.</p>
 
 
+<p>For example, if you wanted to declare an int in C or Java you would write something like this:
+</p>
+
+<pre>int my_number = 42;
+</pre>
+
+<p>We don’t need to do this in Python. The reason for this is that Python is what we call a dynamically typed language. Therefore we don’t have to specify the type because Python will make that determination for us at runtime (while the program is running), meaning that we can focus on writing code instead of making sure we get all of our types correct! This is often referred to as duck-typing. The philosophy here is: If it quacks, treat it as duck, otherwise, handle it differently. For example, if we have a variable that contains a number that doesn’t have a decimal point, treat it as an int; otherwise, if it does have a decimal point, treat it as a float. A language that requires us to specify the type of variable that we wish to declare is called a statically typed language. Java and C# are examples of this, but we’re not going to cover those here.</p>
 
 
+<h3> Working With Different Types Of Numbers - Part One
+</h3>
 
+<p>What is it?
 
-
-
-
-
-
-
-
+The ability to work with different types of data <b></b></p>
 
 </body>
 </html>
