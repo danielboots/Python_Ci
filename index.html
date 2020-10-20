@@ -389,5 +389,235 @@ The tuple must contain the integer and the float, in that order.</p>
 
 
 
+<h3>strings</h3>
+
+<p>Strings are means of working with text in a programming language <br>Provide a means of working with text, instead of having to work solely with numbers <br>Strings can be used in much the same way as numbers. We can store them, read them either in their entirety, or in part, and manipulate these to derive new strings.</p>
+
+<p>Fortunately, there’s much more to computer programming than working with numbers. Otherwise writing programs would be very difficult indeed! Strings enable us to work with words and text. In the tradition of almost every programming lesson ever, we’re going to print a string that says Hello World! It has long been a tradition in the world of programming languages to print out the statement that says “Hello World”, announcing yourself to the world as a developer, as well as testing the waters with a new language or concept (https://en.wikipedia.org/wiki/%22Hello,_World!%22_program).</p>
+
+<pre>print("Hello World")</pre>
+
+<p>In Python, anything contained inside quotation marks is treated as a string. We can use double quotes (“”) or single quotes (‘’).
+
+</p>
+
+<h3>types of quotation = defining the scope of the sting</h3>
+
+<p>Allows us to use different ways of creating and working with strings
+
+<br>We use the “”, or ” to define the scope of a string.
+
+ </p>
+
+ <p>We have different uses for each type of quotation. The reason for this is because the written language also has grammatical uses for quotations.
+
+
+</p>
+
+<pre>print("Then Mike said "What is that?"")
+print('It's a beautiful day')</pre>
+
+<h3>fixed</h3>
+
+<pre>print("Then Mike said 'What is that?'"")
+print("It's a beautiful day")</pre>
+
+<h3>escaping </h3>
+
+<pre>print('Then Mike said "what's that?"')</pre>
+<p>In order to get around this we’ll need to use an escape character, which we’ll take a look at next.
+
+</p>
+
+<h3>Strings - Required: Challenge</h3>
+<p>As you learned throughout the last few challenges, there are some built-in data types in python. A couple that you've worked with so far are floats (decimals) and ints (integers), which are used to represent different types of numbers.  Strings are another built-in data type in python, and they're typically used to represent text. If you were to print the phrase "Hello, world!" in python, the "Hello, world" part is a string.
+
+You already know how to use the print() function to print things out and how to assign variables. Let's put those skills to work, and add a little something extra, too! In python, you can use the type() function to identify the data type you're working with. This can come in handy for debugging since sometimes you may need to know if you're working with a float, an int, a string, or some other type of data. 
+
+The type() function works almost identically to the print() function: While you put what you'd like to print in the parentheses in the print() function, to print something's type you can simply put what you'd like to know the type of in the type() function's parentheses. You'll learn more about functions later, but this is a nice primer. </p>
+
+<h4>print()</h4>
+<h4>type()</h4>
+
+<h3>solution</h3>
+<p>Your challenge is to:
+Assign the phrase "Without hard work, nothing grows but weeds." to the variable my_string
+Print your variable
+Print the type of your variable on a new line
+
+Don't be afraid to do some research outside the course material if you need help, and experiment with printing out the types of other things too.
+
+If you're stuck, the Strings lesson - specifically the Hello World unit - will give you (almost!) everything you need to succeed. Be sure to submit and compare your answer with the model solution (only available to view after you click submit).
+
+Enjoy!</p>
+
+
+<pre># Define a variable, my_string, here, then print it.
+
+my_string = "Without hard work, nothing grows but weeds."
+print(my_string)
+# Print its type on a separate line
+
+print(type(my_string))
+
+</pre>
+
+<h3>escape characters -1</h3>
+
+<p>A special character that allows us to format text inside of a string <br>Allows us to create escape quotations, newlines, tabs, etc. inside of our string <br>The escape character is merely a backslash (\)
+
+</p>
+
+<img src="assets/img/escape.png" alt="">
+
+<p>To use the apostrophe inside our string, we’re going to need to tell Python that the apostrophe is part of the string and not the end of the string. We can do this with the backslash (\).</p>
+
+
+<p>The backslash is called an escape character. In some instances, we need to use the escape character to tell Python that we wish to do some formatting in our string. In this case, we wish to use an apostrophe within our string as in the above runnable example. We also needed to use a \ in a string so we need to escape that too so we do: \\
+
+We can also use the escape character for double-quotes as shown in the runnable example below.</p>
+
+
+<img src="assets/img/esc.png" alt="">
+
+ 
+
+<h3>part 2 - escape character</h3>
+
+<h4>challenge</h4>
+<p>original: </p>
+<p>print("Apples and oranges," remarked John. "Nope. I’d be inclined to disagree," replied Mike)</p>
+
+<p>fixed:</p>
+
+<pre>print("Apples and oranges,\" remarked John. \"Nope. I’d be inclined to disagree,\" replied Mike")</pre>
+
+<h3>escape pt 2</h3>
+
+<pre>print("Hello\nThere")</pre>
+<p>puts hello and there on new lines</p>
+
+<p>After the word Hello, we use \n to create a new line. After that, we just have the word There. Once this code is run, Hello and There will be printed on two separate lines. Carriage return \r is often interpreted by the operating system in the same way, but historically it is different. Use \n to create a new line.
+
+</p>
+
+<h3>tab</h3>
+
+<p>A special character that allows us to format text inside of a string <br>Allows us to create escape quotations, newlines, tabs, etc. inside of our string <br>The escape character is merely a backslash (\) 
+</p>
+
+<h3>\t will indent a piece of text, much in the same way as the Tab key.
+
+
+</h3>
+
+
+<pre>print("Hello\n\tThere")</pre>
+
+
+<p>In this example, we’ve combined the new line with the tab to better illustrate the tab. As we can see, the word Hello is at the furthermost left, but the word There is indented due to the use of the \t.
+
+</p>
+
+<h3>string variables</h3>
+
+
+<p>storing strings in variables</p>
+
+<p>We just assign a variable a value of a string, in much the same way as we declare numeric variables!</p>
+
+<p>We now know how to create different types of variables using numbers, but we can store string variables too. We do this in the same way that we create a variable with a number. So without further ado:</p>
+
+
+<pre>my_string = "Hello World"
+
+print(my_string)</pre>
+
+<p>
+Here we’re just creating a variable called my_string with a value of Hello World and then printing out the value contained within that variable. Python will figure out what type this variable is, and therefore, we don’t have to worry about telling it that we wish to store a string.</p>
+
+<h3> Concatenation
+</h3>
+
+<p>Not only can we store strings in variables, but we can also use the addition and multiplication operators in Python. Adding strings is called concatenation.
+
+</p>
+
+<pre>variable_one = "Hello"
+variable_two = " World"
+variable_three = "!"
+
+result = variable_one + variable_two + variable_three
+
+print(result)</pre>
+
+<p>or by using the *2 method outlined below</p>
+
+<pre>my_string = "boo"
+
+result = my_string * 2
+
+print(result)</pre>
+
+<p>If we have a string of boo and multiply it by 2, then we’ll end up with booboo. Python takes the string and will append the same string to the end of the first variable as many times as we multiply it by, which in this case is 2.
+
+</p>
+
+
+<h3> string methods</h3>
+<p>Python built-in methods that you can use on strings
+
+<br>Allow us to modify and manipulate string values
+
+<br>We use string methods by using a dot (.) after the string, followed by the method name and a pair of brackets.
+
+<br>We can use methods on certain types of data. These methods will usually return some piece of information about the string in question or will return a modified version of the string. Let’s take a look at how some of these can work.
+
+
+</p>
+
+<pre>my_string = "HELLO WORLD"
+my_string_lower_case = my_string.lower()
+
+print(my_string_lower_case)
+
+my_string_2 = "hElLo WorLD"
+my_string_2_upper_case = my_string_2.upper()
+
+print (my_string_2_upper_case)
+print (my_string.isalpha())
+
+greetings = my_string.replace("WORLD", "Dave")
+print(greetings)
+
+motion = ("jump", "walk", "run")
+new_string = "ing ".join(motion)
+print(new_string)
+
+print(my_string_2.split(" "))
+
+spaced_string = "     42       "
+print(spaced_string.strip())
+</pre>
+
+<p>returns:</p>
+
+<pre>hello world
+HELLO WORLD
+False
+HELLO Dave
+jumping walking run
+['hElLo', 'WorLD']
+42</pre>
+
+<h4>in REPL</h4>
+<img src="assets/img/stringmethods.png" alt="">
+
+
+<p>Here we declare a new variable called my_string and assign it the value of HELLO WORLD. On the next line, we declare a new variable called my_string_lower_case. We then use the string method called lower. To use this method, we use the dot notation (.) to access the lower method from my_string. Then we just use the empty parentheses to invoke the method. The .lower() method will give us the same string, but with all of the characters switched to lowercase. The result of this action is then assigned to the my_string_lower_case variable that we declared. In the Repl.it session above, try using the .upper(), .capitalize() and .title() methods and see what results they return.</p>
+
+
+
+
 </body>
 </html>
