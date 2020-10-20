@@ -266,7 +266,128 @@ By declaring variables!</p>
 
 <p>What is it?
 
-The ability to work with different types of data <b></b></p>
+The ability to work with different types of data <b></b>What does it do?
+
+Gives us the ability to use different types of numbers in mathematical operations
+
+ <br>How do you use it?
+
+By performing arithmetic operations on different types of data </p>
+
+<p>
+So now that we’ve established that Python has different types of numbers, how do we work with them? First of all, let’s clear something up. In Python 3, whenever we use the division operator, the result will always be a float. For example:</p>
+
+<p>15 / 3 = 5.0 </p>
+
+<p>Notice that the result here is 5.0. The point accommodates the possibility that the result might not be a whole number, which we can see in this example:
+</p>
+
+<h3>however...</h3>
+
+<pre>14 / 3 = 4.666666666666667</pre>
+
+<p>Now the result is 4.666666666666667. The number 3 doesn’t divide evenly into the number 14. The nearest number that it will divide into is 12 with a remainder of 2. Another way of wording this is that three goes into fourteen 4.666666666666667 times. If we were to use the modulo operator (%) here instead of the division operator (/), we would get a result of 2.</p>
+
+<h3> Working With Different Types Of Numbers - Part Two
+</h3>
+
+
+<p>The ability to work with different types of data <br>What does it do?
+
+Gives us the ability to use different types of numbers in mathematical operations <br>How do you use it?
+
+By performing arithmetic operations on different types of data  </p>
+
+
+<p>But what if we wanted to do some division that just returns an int instead? In that case, we would use the floor division operator. Back in the Arithmetic Operators section, we saw a floor division operator that looked like this –//. It rounds the number down to the nearest whole number. For example:</p>
+
+<pre>14 // 3 = 4</pre>
+
+<p>As we can see, the result of 14 // 3 will return 4 (without any decimal points).
+
+</p>
+
+
+<h3> Working With Different Types Of Numbers - Part Three</h3>
+
+<p>The ability to work with different types of data
+
+<br> What does it do?
+
+Gives us the ability to different types of numbers in mathematical operations  <br>How do you use it?
+
+By performing arithmetic operations on different types of data</p>
+
+
+<p>Now that that’s out of the way let’s look at how we can combine the two different numbers. Fortunately, Python is intelligent enough to know that floats and ints are numbers. It’s also smart enough to know that ints can’t contain decimal points. For this reason, if we add an int to a float, the result will be a float.</p>
+
+<h3>int to float</h3>
+
+<pre>print(4 + 4.0)= 8.0</pre>
+
+<p>Even though 4.0 can be considered to be a whole number because it has a 0 after the decimal point, Python plays it safe and returns 8.0 anyway. Any arithmetic operation that involves an int and a float as its operands behaves the same. However, if we were to perform an arithmetic operation on two ints, then the result will be an int. Similarly, if we use two floats as our operands, then the result will be a float.</p>
+
+<h3>currency converter</h3>
+
+<p>What does it do?
+
+Converts from one currency to another <br>How do you use it?
+
+We combine mathematical techniques to create useful formulae. We would use BOMDAS if we wanted to convert currencies. </p>
+
+<p>Let’s say that 1 euro is equal to 1.11 in USD. To find out how many USD one would get for 25 euro, we would just multiply 25 by 1.11.
+
+</p>
+
+<pre>usd = 1.11
+print(25 * usd)</pre>
+
+<p>The result here is 27.750000000000004. While this may be correct, it’s not very friendly. As we know, currency is rounded to two decimal places. In order to achieve this, we need to use the round function.</p>
+
+<h5>rounded</h5>
+
+<pre>usd = 1.11
+euro = 25
+total_usd = round(euro * usd, 2)
+print(total_usd) <br>returns: 27.75</pre>
+
+<p>
+Here we’ve stored the converted and rounded value in a variable called total_usd. The first argument that we pass to the round function is the value that we need to be rounded, and the second argument is the number of decimal points that we want to round to. In this case, we want to round to two decimal places.</p>
+
+
+<h3>moon weight</h3>
+<p>moon weight calculator <br> Will calculate how much you weigh in the moon’s lower gravity <br>Use multiplication to calculate weight based on known Earth to Moon gravity difference and your Earth weight. </p>
+
+<p>The force of gravity on the moon is one-sixth or 16.5 times weaker than it is on earth. If we were to go to the moon, then we would weigh one-sixth of what we currently weigh here on Earth. So how would we calculate this? To calculate this, we need to multiply a value (weight) by 0.165.</p>
+<p>In this example, if we weighed 75 KG here on planet Earth, we would weigh 12.38 KG on the moon!
+
+</p>
+
+
+<pre>print(round(75 * 0.165, 2)) = 12.38</pre>
+
+
+<h3>challenge - number types </h3>
+
+<p>Number Types - Required:
+You might recall learning in the Number Types lesson that there are two number types we'll work with quite a lot in python: int (integers/whole numbers) and float (decimals).
+
+Your challenge is to:
+Define a variable, my_int, which is an integer
+Define a variable, my_float, which is a float
+Change the function return_numbers() so that it returns them as a tuple (Google it, you'll need it later anyway!)
+
+Requirements: 
+The tuple must contain the integer and the float, in that order.</p>
+
+<pre>def return_numbers():
+    # Define my_int and my_float here, then return them as a tuple:
+    my_int = 14
+    my_float = 12.5
+    
+    return (my_int, my_float)</pre>
+
+
 
 </body>
 </html>
