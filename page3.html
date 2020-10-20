@@ -325,12 +325,138 @@ print(opposites(True))</pre>
 <img src="assets/img/nestel.png" alt="">
 
 
+<p>In this example, we’ve started by declaring three variables – exit_program, manual_override, and critical_systems_shutdown. In the if statement, we have two conditions. We are checking to see if both exit_program and critical_systems_shutdown are False. If both are False, then inside our if block we write another check to see if manual_override is True. If manual_override is True, then we print out “Shutting system down manually”. else we print out “This program will not exit just yet”. Else if exit_program is True, but critical_systems_shutdown is False, then we print out “Critical systems must be safely shut down before exiting the program”. Else, if both exit_program and critical_systems_shutdown are True, then we exit the program by printing “This program will now be terminated…”</p>
+
+
+<h3>nested challenge</h3>
+
+<p>Over the last several challenges you've learned to work with logical and conditional operators and if ... elif ... else statements. The final step in understanding Python logic is to understand Nesting. Nesting is common in almost every programming language, and usually is simply a way of telling the language with more granularity when it should execute certain blocks of code. A common use case for this might be if you want to perform some actions only if another condition is true, but the action you want to perform also requires some additional checks to decide how it should be performed. For example:</p>
 
 
 
+<pre>if thing1:
+    if thing1a:
+        # Do thing1a action
+    elif thing1b:
+        # Do thing1b action
+    elif thing1c:
+        # Do thing1c action
+    else:
+        # Do some default action
+elif thing2:
+    # do thing2 action
+else:
+    # Do something completely different 
+</pre>
+
+<p>In the above code, it should be relatively clear that in order to get to, say, "thing1a action", first thing1 itself must be True, and then once we're inside that if statement, thing1a must be True. It's also important to understand that Python will read this code from top to bottom, but it will skip anything it knows it won't need. For example, if thing1 is False, Python knows immediately that it doesn't need to check whether thing1a, thing1b or thing1c are True or False, and will simply skip to checking whether thing2 is True or False.
+
+In this way you can design code that is very granular and allows you to check all sorts of conditions and have many different results depending on different situations! 
+
+In the code window we've started a small function, check_engine(), which takes in three parameters, oil, coolant, and gasoline. We'll define those variables for you when we run the test, so you can focus on just writing the nested condition. For simplicity, we'll feed those variables in as either 1 (meaning it's good) or 0 (meaning it's bad). With that in mind, we all know that a vehicle needs oil, gas and coolant to run properly...
+
+Your challenge is to:
+Replace the return statement with a nested if statement that meets the following requirements: br
+Requirements:
+If oil is equal to 1, then return the string "engine started!" only if gasoline is equal to 1 and coolant is equal to 1. Otherwise, return the string "gas or coolant issue"
+Otherwise, return the string "oil issue"
+You must use a nested if statement in your code
+</p>
+
+<img src="assets/img/gasoilcool.png" alt="">
+
+
+<h3>Ternary operator</h3>
+<p>if expression: Allows us to write shorthand if statements <br>Sometimes we don’t need to create lengthy if-else conditions, as it would be easier to work with a single one-liner. In this instance, we’d use an if expression
+
+<br>In addition to using the if-else ladders that we’ve been using up until now, Python also comes with a shorthand version of the if-else statements that is usually called the if expression. Let’s take a look!
+
+</p>
+
+<pre>my_boolean = False
+
+my_string = "Hello" if my_boolean else "World"
+
+print(my_string)</pre>
+
+<p>prints out : World.</p>
+
+<p>In this example, we create a new variable called my_boolean and assign it a value of False. Then on line 3, we create a new variable called my_string. Then we use the if expression to assign a value to my_string based on whether or not a particular condition is true.
+
+The way the if expression works is as follows: expression1 if condition else expression2
+
+Expression1 will be the value assigned to my_string if the condition is true, else expression2. In this case, my_string will be assigned a value of 'World' because the condition (my_boolean) is false.</p>
+
+<h3>ternary operator challenge</h3>
+
+<p>As you write more and more if statements, you'll start to see that complex logic can make your code quite long. In Python there are many ways to write your code in a sort of shorthand, abbreviated way. One way to do this is by using the ternary operator. It's simply a shorthand if statement that can come in handy for quick checks in your code.
+
+Here we've started a function, one_liner(), which takes a single variable, val, and currently returns nothing.
+
+Your challenge is to:
+Modify the return statement to return a boolean True if supplied_val is 1, or False otherwise
+
+Requirements:
+Your function, aside from blank lines and comments for readability, must contain only a single line of code, the return statement
+</p>
+
+
+<pre>def one_liner(supplied_val):
+    # Modify the return statement to use a ternary operator
+    return True if val else False
 
 
 
+# Check your code by experimenting with
+# different values for val here
+val = 1
+print(one_liner(val))</pre> 
+<p>???</p>
+
+<h3>while loops</h3>
+
+
+<p>Provide us with the ability to perform repetitive tasks
+
+ <br>Sometimes we might need to re-run the same good code over and over again. To do this, we use while loops that will run while some condition is true
+
+</p>
+
+<img src="assets/img/while.png" alt="">
+
+<img src="assets/img/while1.png" alt="">
+<p>explained: countdown number - start here, while the countdown number is more than or equal to 0 run the loop and print the countdown number, each loop remove one (-=0) thus returning the countdown printed </p>
+
+<p>In this example we declare a variable called countdown_number, then we proceed to begin a countdown sequence. Then we have our while loop. We create this by starting with the while keyword, followed by a condition. In this case, the code inside the while loop will be executed so long as countdown_number is greater than or equal to 0. Inside the while block, we print out the countdown_number, followed by the word “seconds”. Next, we subtract 1 from the countdown_number, meaning that with each iteration, the countdown_number gets closer to 0. Once the countdown_number reaches 0, on the last iteration the countdown_number will be set to -1. Since this value is not greater than or equal to 0, the conditional expression of the while loop won’t evaluate to true and the while loop will be skipped. After exiting the loop, we simply print out, “And We Have Lift Off!”</p>
+
+<img src="assets/img/while3.png" alt="">
+
+<p>Here we’ve declared a variable called play_game which is set to true. While play_game is true, we do the following. First, we ask the user if they wish to continue playing the game. We indicate the answer should be yes or no (“y/n”). We then store this value in a variable called continue_playing. We then check to see if continue_playing is equal to “y”. If it is, then we tell them that they’ve decided to continue playing.
+
+<br>NOTE: We’ve used the .lower() method, just in case a user uses an uppercase input. When working with uppercase and lowercase, it’s important to note that, while they are the same letter, they are not the same string.
+<br>If this is the case, then the while loop will begin its next cycle, and the user will be prompted again. Else if continue_playing is equal to “n”, then we inform them that they’ve decided to quit the game, and we set the play_game variable to false. Now that the play_game variable is no longer true, the program will exit the loop and print out, “Thanks for playing.” Lastly, if the user enters something other than y or n, then they’ll be informed that their decision was invalid and they need to try again.
+
+
+</p>
+
+
+<h3>challenge - while loops</h3>
+<p>While loops allow you to tell Python to do something "while" a condition is true. For example, if you wanted to implement a countdown timer, you might write a while loop that executes a block of code every second, while a variable called time is greater than or equal to zero. In this way the same block of code would execute over and over again until time is no longer greater than or equal to zero. Then the program will move on to the next block of code.
+
+You can control which code gets executed within the while loop by properly indenting your code: any code you'd like to execute should be indented at least one indent level with respect to the first line of the while loop. 
+
+Here we've started a small function, listmaker(). It's supposed to use a while loop to add some numbers to a list (which it does by using numbers.append() - you'll learn about this later ... don't worry about it for now) The function currently has a couple variables defined but doesn't return anything, and has a couple syntax errors. You're going to use your knowledge of while loops to fix it!
+
+Your challenge is to:
+Define the current_number variable on line 3 to be some integer greater than 10 by replacing #??? with your value
+Replace #something ... on line 5 with the proper while loop syntax to make sure the code on lines 6-8 executes until current number is less than 0
+
+If your code is correct, when you run it you'll see output like this, assuming current_number = 15:</p>
+
+
+<p>fixes including adding value to the current number and envoking the while look using current_number >=0 see below</p>
+
+<img src="assets/img/whilechallenge.png" alt="">
 
 
 
