@@ -27,26 +27,302 @@
 <img src="assets/img/operatorsimg.png" alt="">
 
 
+<pre>number = int(input("Please enter a number:"))
+
+if number < 5:
+    print("The number is less than 5")</pre>
+
+<p>code will only run if a number input is less than 5 and return the number is less than 5</p>
+
+
+<p>we can also use the <= operator, this means less than or equal too, so 5 included if we enter the number 5 or less, however Note: Except for the equal to operator, none of these operators will work for strings.
+
+</p>
+
+<h3>challenge conditional operators</h3>
+
+<p>Conditional Operators - Required:
+In the execution flow challenges you learned that you can define variables and test their values using if statements in order to determine which block of code should execute. As you learned in the Operators lessons, there are also several conditional operators you can use to compare different values together. Some of them we'll be working with often are:
+
+Less Than: <
+Less Than or Equal To: <=
+Equal To: ==
+Greater Than or Equal To: >=
+Greater Than: >
+
+To demonstrate the use of these operators, we've written a small function, test_integer(), which takes a variable, my_int, as a parameter. You don't need to worry about defining the variable here; we'll pass it in already defined during the test. However, if you run the code right now you'll see that the function returns None for all the numbers from 1-20. 
+
+Your challenge is to:
+Complete the function by writing an if statement that returns "10 or less" if my_int is less than or equal to 10, or
+Returns "greater than 10" if my_int is greater than 10
+
+By doing this, you should see the phrases "1 is 10 or less" through "20 is greater than 10", each printed on a new line when you click run.
+
+Requirements:
+You only need to write the if statement inside the function.
+The return line should be replaced with your if statement so that the function can return two different results, depending on the number passed into it</p>
+
+<h3>solution</h3>
+
+<img src="assets/img/operatorchaless.png" alt="">
+
+
+<h4>code</h4>
+<pre>def test_integer(my_int):
+    # Write your if statement here:
+    if my_int <= 10:
+     return ("10 or less")
+    else:
+     return ("greater than 10")
+
+
+# Do not modify below this line
+for x in range(1,21):
+    print(f'{x} is {test_integer(x)}')
+    </pre>
+
+
+<h3> Additional Clauses - Part One
+</h3>
+
+<h4>Else and elif clauses
+
+</h4>
+
+<p>Provide us with the ability to handle different conditions
+
+<br>Sometimes we might need to be a bit more expressive than simply using an if statement. This means also having if-else-elif ladders
+
+</p>
+
+<p>An 'if statement', establishes if a condition is true or false. Following on from this, we also need to make additional decisions, so Python includes elif and else. The code should instruct the computer if 'some condition', then 'do something', else 'do something else'. Let’s take a look at the example below:
+
+</p>
 
 
 
 
+<p>In this example, we have decided to provide feedback to a user. The user enters a number, and if that number is equal to 5, the user will be told that their number is equal to 5. Else the user is informed that their number is not equal to 5. else operates as a catch-all clause. The else clause handles anything that has not already been dealt with in the 'if clause'. Therefore we don’t need to specify any clauses in the else statement.
+
+</p>
+
+<pre>number = int(input("Please enter a number:"))
+
+if number == 5:
+    print(f"{number} is equal to 5")
+else:
+    print(f"{number} is not equal to 5")</pre>
+
+<p>when we need additional params we use the elif also like javascripts elseif see example below</p>
+
+<pre>number = int(input("Please enter a number:"))
+
+if number > 5:
+    print(f"{number} is greater than 5")
+elif number < 5:
+    print(f"{number} is less than 5")
+else:
+    print(f"{number} is not greater than, or less than 5. Therefore, {number} must be equal to 5.")</pre>
+
+
+<p>In this example, we have an if condition that checks to see if a number is greater than 5. If that statement doesn’t evaluate to true, then it falls to the elif statement. The elif statement then checks to see if the number is less than 5. Lastly, if this check fails, then it will default to the else statement. If the number is greater than five, then we print out a message, stating that the number entered is greater than 5. Else if the number is less than five, then we print out a message indicating this. Else, if the number is neither greater than or less than 5, then the number must be equal to 5. Although we didn’t use the equal to operator here, we were able to deduce that because the number isn’t greater than 5, or less than 5, it has to be equal to 5.
+
+</p>
+
+<h3>challenge elif else if//</h3>
+
+<p>In the first execution flow challenge you used a boolean variable to determine whether or not you would survive a zombie apocalypse. Let's build on that with this next challenge. You may recall learning in the Operators lesson that you can use multiple clauses in your if statements. For example, to determine whether a section of code should execute based on a boolean variable being true or false, you can simply do something like: 
+</p>
+
+<pre>def some_function():
+    some_thing = False
+    if some_thing:
+        print("some_thing is True!")
+    else:
+        print("some_thing is False!")</pre>
+
+<p>Notice that we technically don't even need the else, because if we know that some_thing is False, we implicitly know that it is not True, so we could even do this and get the exact same result:</p>
+
+<pre>def some_function():
+    some_thing = False
+    if some_thing:
+        print("some_thing is True!")
+
+    print("some_thing is False!")</pre>
+
+<h3>above notice the indentation which removes the neeed for the else statement.</h3>
+
+<p>But what if we wanted to have multiple possible results? Remember the use of the if ... elif ... else syntax! In the code window we've written a small function, number_size(), which takes an integer, num, as a parameter and currently returns nothing. You don't need to worry about defining num, we'll do that for you when running the tests</p>
+
+<p>Your challenge is to:
+Replace the return statement with an if statement that:
+Returns the string "small" if the number is less than 10
+Returns the string "large" if the number is greater than 10, and
+Returns the number itself (10) if the number is equal to 10</p>
+
+
+<h2>nailed this one....</h2>
+<h3>solution</h3>
+
+<pre>def number_size(num):
+    # Replace the return statement with your if statement here
+    if num  <10:
+      return ('small')
+      
+    elif num  >10:
+      return ('large')
+    
+    elif num == 10:
+      return num
+   
 
 
 
 
+# Do not change anything below this line
+for num in range(0, 21):
+    print(f'{num} is {number_size(num)}')</pre>
+
+    <img src="assets/img/elifchallenge.png" alt="">
 
 
 
+    <h3>however model solution</h3>
+    <p>only difference if we finish with the else, probably better</p>
+
+    <pre>def number_size(num):
+    if num < 10:
+        return "small"
+    elif num > 10:
+        return "large"
+    else:
+        return num
+
+# Do not change anything below this line
+for num in range(0, 21):
+    print(f'{num} is {number_size(num)}')</pre>
+
+<h3>logical operators</h3>
+<p>Logical operators allow us to chain multiple conditions together. <br>We can use the not, or and and operators
+</p>
+<img src="assets/img/logop.png" alt="">
+
+
+<p>
+Instead of just checking something is true, we can also check to see if something is not true. We can also chain conditions together to see if condition1 and condition2 are true. And we can also test to see if either condition1 or condition2 is true. To do this, we have to use what are called logical operators. Don’t worry though! This time we don’t have to learn about symbols because Python uses everyday words for these operators.
+
+</p>
+
+<p>example</p>
+
+<pre>exit_program = False
+
+if exit_program:
+    print("This program will not exit just yet")
+else:
+    print("This program will now be terminated...")</pre>
+
+
+<p>The if clause is considered to be False, meaning the print function inside it is not executed. Instead, it falls to the else and prints out, “This program will now be terminated…” even though the exit_program variable is set to False.
+
+</p>
+
+
+<p>When we’re building programs, videos game, websites, etc. there are two different categories of bugs that we can inadvertently introduce into our code. These are syntax errors and logical errors. Syntax errors occur when we have issues in our code that explicitly cause Python to stop running. If we tried to divide an int by a string, for example, Python would not be happy about it! Logical errors occur when our logic fails us, or we misuse a part of the language based on an assumption. Expecting if False: to evaluate to true, for example, would cause a logical error. If we wanted to get around this issue, then we would have to use the not operator.
+
+</p>
+
+<pre>exit_program = False
+
+if not exit_program:
+    print("This program will not exit just yet")
+else:
+    print("This program will now be terminated...")
+</pre>
+
+<p> returns 'This program will not exit just yet'</p>
+
+
+<p>Here we’re unfortunately dealing with a double negative. Not false will equate to true. Meaning our condition will evaluate to true and the code inside the if clause will execute. Try changing the exit_program variable to True to see what happens.
+
+</p>
+
+
+<h3>logical operator part 3</h3>
+<h3>AND operator </h3>
+
+<p>Let’s take a look at the and operator. This time we want to check to see if the program should be terminated AND all critical systems have been shut down. We need to check to see if all the vital systems have been shut down before we can safely exit the program. To achieve this, we have two bools: exit_program and critical_systems_shutdown. Let’s look at how that will work:
+
+</p>
+
+<pre>exit_program = True
+critical_systems_shutdown = True
+
+if exit_program and critical_systems_shutdown:
+    print("Safely terminating program...")
+else:
+    print("This program will not exit just yet")</pre>
+
+<p>In this example, we check to see if exit_program AND critical_systems_shutdown are True. If both are, then we print out “Safely terminating program…”, else “This program will not exit just yet” will be printed. Try playing around with exit_program and critical_systems_shutdown to see what might happen if you change their boolean values. The or operator works in a similar way to the and operator. The difference is that both conditions in an and clause MUST evaluate to true; however, with the or operator at least one condition must be true. Let’s take a look at it in the example below:
+
+</p>
+
+<h3>or operator.... only one of the statements need to be true for the code to run</h3>
+
+<pre>exit_program = False
+manual_override = True
+
+if exit_program or manual_override:
+    print("This program will now be terminated...")
+else:
+    print("This program will not exit just yet")</pre>
+
+<p>This time we have two variables with boolean values: exit_program is False and manual_override is True. In our, if condition, we check to see if either of those values are true. Python will check each condition until it finds one that is true. If the first condition is true, then it doesn’t care about the second condition as one of them has already been seen to be true.
+
+</p>
+
+<img src="assets/img/or.png" alt="">
+
+
+<h3>operators challenge.</h3>
+
+<p>In the Operators lesson you learned about a set of operators called Logical Operators. These operators can help you to apply logic to your code, particularly conditional code like if statements. The logical operators include: 
+
+and, which returns true when both conditions are true
+or, which returns true when either condition is true
+not, which returns the opposite of whatever it's applied to
+
+You can (and often will be required to) use these operators to make your Python code behave in a reliable and predictable way. In the code window we've started a small function, opposites(), which takes a single argument, item, and currently returns nothing.
+
+Your challenge is to:
+Make the function return the opposite of item using a logical operator.</p>
+
+<pre>def opposites(item):
+    # Return the opposite here
+    not item == True  
+  
+    return not item
 
 
 
+# Experiment with different values in 
+# place of True here if you're stuck!
+print(opposites(True))</pre>
 
 
+<h3>Nesting conditions</h3>
 
 
+<p>Provide a means of implementing additional if-else ladders inside of existing if-else blocks
+
+<br>Sometimes we may need run additional checks inside of an if, elif, or else block. To do this, we write our new if-elif-else block inside of an existing if-elif-else block
+
+<br>We can write an if-elif-else statement inside another if-elif-else statement which is called nesting conditions. Let’s take a look at what this might look like:
+
+</p>
 
 
+<img src="assets/img/nestel.png" alt="">
 
 
 
