@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Python</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+  
+<body>    
+
+<h1>Python strings Sequences</h1>
+<p>Notes page 4</p>
+<p>We may need to break up our strings into smaller pieces
+
+</p>
+
+
+<p>Lists are used to store a collection of variables. It comes in handy for when we wish to group more significant amounts of data. We’ve used quite a few lists already in this course. Strings are lists that are composed of characters, or char. Char is a type that is never comprised of more than a single letter or number. When we group many of these chars, we end up with a string, which is a type of list. Because a string is a list, there are many other things that we can do with it other than just use string methods. Firstly, we can get the length of a string by using the len() function. Let’s try that out below:
+
+</p>
+
+<img src="assets/img/stringlength.png" alt="">
+ 
+<img src="assets/img/stringlength1.png" alt="">
+
+<p>Here we iterate over the string and print out each character.
+
+</p> 
+
+
+<h3>string challenges: string sequencing</h3>
+
+<p>In Python as well as many other programming languages, strings are iterable, meaning we can loop through them, character by character, and do things with each character! We can use this property of strings to do things like count the number of letters in a word, count the number of words in a sentence, rearrange letters and words, and many other things. 
+You might recall learning that you can get the length of a string by using the len() function. Here, We've started a small function, pale_blue_dot(), which currently returns nothing.
+
+Your challenge is to:
+Use the len() function to make the pale_blue_dot() function return the total number of characters in the Carl Sagan quote below.
+</p>
+
+
+
+<img src="assets/img/sagan.png" alt="">
+
+<h3>indexing part 1</h3>
+
+<p>Provides the ability to access individual items in lists
+
+<br>When we have a collection of items stored in a list, but only require individual items, we use indexing to access them
+
+<br>When working with lists, we don’t have to work with lists as a whole. We can access each item in a list using indexing. Every item in a list has an index, and we can use that index to target specific items, or to access groups of items in lists. These items are usually referred to as elements. Let’s take a look at an example:
+
+</p>
+
+<img src="assets/img/hellostring.png" alt="">
+
+<p>Here we’re asking the user to enter a word. Then we use [0] to get the first letter of the word, and then we print it out. However, if the user just hits the enter without typing in a word, the string will be empty, and Python will say “IndexError: string index out of range.” The reason for this is the list doesn’t have any indices because it’s empty.
+
+</p>
+
+<p>Provides the ability to access individual items in lists
+
+<br>When having a collection of items stored in a list, but only require individual items, we use indexing to access them
+
+</p>
+
+<p>If we have a string with the value of “Hi” and want to access the letter ‘i’, we would need to use [1].
+
+</p>
+
+<pre>word = "Hi"
+
+print(word[1]) returns i</pre>
+
+<p>The above example will achieve just that! If we were to try to use [2] in this case, we would get another “IndexError: string index out of range.”
+
+</p>
+
+
+<h3>index challenges</h3>
+
+<p>Indexing - Required:
+In the string sequencing challenges, you used the len() function to determine the length of some long strings of text, among other things. We can also access specific characters in a string by using indexing or items in a list.
+
+For this challenge we've defined a small function, index_function(), which currently returns an empty list. 
+
+Your challenge is to:
+Assign the string, "Fundamentals" to a variable, index
+Use indexing to make the index_function() return the list provided, which should contain, in the correct order.
+1st the letter at index 4 of the variable index, 
+2nd using negative indexing, the fourth last letter of the variable index.
+
+Requirements:
+The returned list should contain the two letters obtained by indexing 
+You must use indexing, items must be returned in the correct order as stated above.</p>
+
+<img src="asset/img/indexchallenge.png" alt="">
+
+<h3>lists</h3>
+
+<p>Provide a means of grouping pieces of similar information together
+
+<br>When we have a group of items, we can store them in a list, so we have them all in the one place
+
+<br>Now that we have a bit of understanding of what lists are, let’s take a look at what it’s like to create some lists, instead of just using range() and strings. In the below example, we’ll generate a list of fruit, and then we’ll print each element out to the console.
+
+</p>
+
+
+<img src="assets/img/lists.png" alt="">
+<p>Here we’ve just created a list called fruits. It is a list of strings separated by commas (,). This comma-separated list of strings is enclosed in a pair of square brackets. At the beginning of the for loop cycle, the for loop will grab the next element (in this case fruit) in the list and will then print it out. Once that cycle is complete, or there are no more statements inside the for loop, the next iteration begins and the next fruit is pulled from the list of fruits.
+
+</p>
+
+<p>iterating through list using while loop</p>
+
+<img src="assets/img/fruitlooplol.png" alt="">
+
+<p>Here is a slightly more elaborate example using a while loop and list indexes. Firstly, we have our fruits list which is the same list of fruits that we used before. Next we’ve declared a variable called counter. Each time we run this while loop, we’ll increase the value of this by one. After this, we have our while loop. This while loop checks to see if the counter is less than the length of fruits. This way, every time the counter variable is increased, it will map directly to an index that’s contained within the fruits list.</p>
+
+<pre>Let’s take a look at the example below:
+
+Element      “apple”   “banana”   “peach”   “pear”   “plum”   “orange
+Index               0                1                   2               3               4               5
+
+Instead of using the actual number inside the square brackets, we can just use the counter variable as the index value. After that, we just clock up our counter by using the arithmetic operator to add one to the existing counter variable, and the process starts again, so long as the condition in the while loop is true!</pre>
+
+
+<h3>list challenge</h3>
+
+
+
+<p>solution
+</p>
+<img src="assets/img/userschal.png" alt="">
+
+
+</body></html>
