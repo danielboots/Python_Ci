@@ -136,4 +136,201 @@ Instead of using the actual number inside the square brackets, we can just use t
 <img src="assets/img/userschal.png" alt="">
 
 
+
+<h3>Break and continue</h3>
+
+<p>break allows us to break out of a loop
+<br>Sometimes we might need to break out of a loop at a certain point, usually determined by some conditional check
+
+<br>In Python, we can break out of and continue running iterations in loops. The break keyword will stop executing the list, and the continue keyword will skip ahead to the next iteration. For example, if we only want to print out two of the elements in our list, then we can use the following:
+
+
+</p>
+
+<img src="assets/img/break.png" alt="">
+
+<p>In this case, we’ve implemented an if statement at the end of our while loop to check to see if the element is peach. If this true, then we use the break keyword to break out of the loop. Because we don’t use indexing inside for loops, the implementation here is slightly different.
+
+</p>
+<p>same example We have the same example here, only this time we’ve used a for loop instead of a while loop. 
+
+</p>
+
+<img src="assets/img/forbreak.png" alt="">
+
+
+
+<h3>break challenge</h3>
+
+
+<p>Break - Required:
+Being able to break out of a loop is a vital part of understanding iteration. Sometimes you'll make a mistake in your coding and accidentally create an infinite loop - a loop that runs forever - or perhaps you'll just need to exit a loop after a specific number of iterations. In all these situations, the break statement will do the job for you.
+
+In the code window we've created a long-running function too_long(). It starts a counter at zero, prints every number from 0 to 99,999, then returns nothing. The problem is it's too long. If we were to add another 9 and try to run it, there's a good chance it would hang the browser (try it, if you're feeling lucky!)
+</p>
+<p>our challenge is to:
+Use an if statement inside the while loop to determine if the count is currently 50
+If it is, assign count to a variable, final_count, then
+Break out of the while loop, and
+Return final_count</p>
+
+
+
+
+<h3>solution</h3>
+<p>did this all on me own! :) pow</p>
+
+<img src="assets/img/chalbreak.png" alt="">
+
+<h3>continue</h3>
+
+<p>continue keyword Allows us to skip an iteration in a loop
+<br>Sometimes we might need to skip an iteration in a loop at a certain point, usually determined by some conditional check
+
+
+</p>
+
+<img src="assets/img/continue.png" alt="">
+
+<p>In this example, we’ve decided that we don’t want to print out peach. As such, inside of our while loop, we have a condition that will check to see if the element is equal to “peach”. If this is true, then we use the continue keyword. Once the continue keyword is executed, this stops the current cycle and will continue straight into the next cycle.
+
+</p>
+
+
+<h3>challenge </h3>
+
+<p>In the last few challenges you practiced breaking out of loops by using the break statement. Sometimes we might just want to skip an iteration or two, to allow our loop to execute on most items in a list, but not all of them. You might recall using the continue statement to to this.
+
+In the code window we've defined a small function, evens(), which does the following:
+
+Defines a variable, even_numbers, which is an empty list
+Defines a variable , all_numbers, which is a list that includes all numbers from 0 to 100 (This is a list comprehension - a handy shorthand for creating a list - by the way! Google it!) 
+Uses a for loop to iterate through the all_numbers list, and append each number to the even_numbers list
+Returns the even_numbers list
+
+The problem is that it appends all numbers to the even_numbers list and returns a list of all the numbers, not just the evens. 
+
+
+</p>
+
+<p>Your challenge is to:
+Use an if statement in the for loop to determine if the current number is odd (you may want to review the modulo operator and the not operator for this purpose)
+If so, use the continue statement to skip it and move to the next iteration
+Ensure that the function returns the true list of even_numbers
+
+Requirements:
+Your function must return a list
+Your function must use the continue statement
+Your function must return the true list of even numbers, without modifying the return statement.
+</p>
+
+<h3>solution</h3>
+<p>the solution to this problem is to use the modulo operator which allows us to continue (ie skip over the odd number, we can use the modulo %2==1 to achieve this</p>
+<img src="assets/img/evenmod.png" alt="">
+
+<h3>99 bottles of beer</h3>
+<p>Similar to the traditional “Hello, World” application, another motif that we see in the world testing out new concepts in programming languages is print out an old folk song called 99 Bottles Of Beer. Every verse of this song is the same, aside from the number of bottles of beer that are on the wall!
+
+99 bottles of beer on the wall, 99 bottles of beer.
+Take one down, pass it around, 98 bottles of beer on the wall…
+
+98 bottles of beer on the wall, 98 bottles of beer.
+Take one down, pass it around, 97 bottles of beer on the wall…
+
+This pattern repeats itself all the way down to 0. So how would we go about singing this song in Python? Well, it’s pretty simple!</p>
+
+
+
+<img src="assets.img/99.png" alt="">
+
+<p>First, we just need a for loop. Our for loop will iterate through the range of numbers between 99 and 0, stepping in -1. Each iteration of the loop will get closer to 0. On the following two lines we just declare two string variables (line_one and line_two). Instead of including the number of bottles of beer in the string, we’ve used placeholders ({0}). And line_two has the newline escape character at the end so we’ll have a clear line break between the verse. Then we just print out line_one, which is formatted to include the number from the current iteration of the loop.
+
+On the first cycle, this will give us:
+99 bottles of beer on the wall, 99 bottles of beer.
+
+Then we print out the line_two, which will contain the current number of the iteration – 1 which, on the first iteration, will give us:
+Take one down, pass it around, 98 bottles of beer on the wall…
+
+This pattern will then continue all the way down to 0. See if you change this to print an alternative last verse if the number is equal to zero –
+No more bottles of beer on the wall, no more bottles of beer. We’ve taken them down and passed them around; now we’re drunk and passed out!</p>
+
+
+<h3>fizz buzz</h3>
+<p>Prints out different words based on certain conditions
+
+<br>FizzBuzz is a common task that developers are asked to complete as part of technical interviews
+
+<br>Fizzbuzz is one of the single most infamous coding challenges that developers are faced with in technical interviews. The idea of fizzbuzz is relatively simple; however, it’s usually the simplicity of this problem that catches out even some of the most battle-hardened developers. The purpose of fizzbuzz is to iterate over a list or range of numbers, and we end up some different choices that must be made depending on the value of that number. If the number is divisible by 3, then we print out fizz. If the number is divisible by 5, we print out buzz. If, however, the number is divisible by both 3 and 5, print out fizzbuzz. Otherwise, we just print out the number. To accomplish this, we need to start with a for loop that iterates over a range of numbers. Any range will do, so long as it at least reaches the number 15, as 15 is the first number in the numeric sequence that is divisible by both 3 and 5. Let’s take a look at how it looks.
+
+</p>
+
+
+
+
+<pre>for number in range(0, 16):
+	print(number)
+
+0
+1
+2
+fizz
+4
+buzz
+fizz
+.
+.
+.
+
+fizzbuzz</pre>
+
+<p>So to start off, we’ve created a range from 0 to 15 (remember that the number 16 isn’t counted here). After that, we just print out the number. We’ll deal the most complicated part of this first, and that’s checking to see if a value is divisible by both 3 and 5. To do this, we just use a simple if statement with an and condition.
+
+</p>
+
+
+<img src="assets/img/fizz1.png" alt="">
+
+<p>To check to see if a number can be divided evenly by 3, we need to use the modulo operator. If the modulo operator returns a value of zero, then that number is evenly divisible by 3. The same applies to 5. We just use the and operator here to say that both of these conditions must be true to execute the code in the if block. Notice that we’ve also moved our initial call to the print function into the else block. This way we can ensure that if the conditions in the if block aren’t met, then we’ll print out the number.
+
+</p>
+<p>So far we’ve managed to print out the fizzbuzz if the number is divisible by 3 and 5, and then we print out the number if it’s not. That’s two parts of the criteria down. Next, we’ll update it to print fizz. For this, we just need an elif to see if the number is divisible by 3.
+
+</p>
+
+<img src="assets/img/fizz2.png" alt="">
+
+<p>So if the number isn’t divisible by 3 and 5, but is divisible by 3, then we print out fizz. Then for buzz, we merely add another elif clause to see if the number is divisible by 5.
+
+</p>
+
+<h3>complete code: fizz buzz</h3>
+<p>we just have to think logical here, using the modulo and if elif else statememnents. we first use a ternary operator to determine if the nummber is devisible by 3 and 5 to print a result, then we use the elif statements to modulo the rest <br>the else statement then just prints out the number</p>
+
+<img src="assets/img/fizzfinal.png" alt="">
+<p>And that’s all there is to it! Play around with different ranges and try different conditions too. For example, if the number is divisible by 4, then print out fizz; if it’s divisible by 4 and 6, then print out buzzfizz.
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body></html>

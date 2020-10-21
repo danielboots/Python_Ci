@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Python</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+  
+<body>    
+
+<h1>Python:</h1>
+<p>Notes page 5</p>
+
+<h3>improving reuse and readablility</h3>
+
+<p>Up until now we’ve been writing little pieces of code and haven’t been concerned about the structure or readability of our application. What I mean by this is that all the code we’ve written so far has been at the top level of our Python files. There once was a time when applications were written in this fashion, but the sheer amount of what makes up the basis of an application would become unwieldy very quickly. Thankfully there are specific constructs that we can use to help improve this. Functions allow us to write a chunk of code that we can invoke whenever we choose. We can also introduce the use of code comments to explain to a developer how it is individual sections of code function.
+
+</p>
+
+
+<h3>Functions</h3>
+<p>They allow us to group pieces of logical statements that will perform a particular task
+
+<br>Most code will be broken out into functions. Functions are a grouping of statements that work together to perform any actions that we may need
+
+</p>
+
+<p>We’ve used plenty of different functions at this point, like print(), input(), range(), and len(). These are all function that Python provides for us, so we don’t have to write all of the logic to perform these tasks ourselves. Not only does this mean that we can reuse the same pieces of code, but also helps to improve the readability of the code. For example, print() would be quite difficult to implement if we had to write out the logic every time that we wanted to print something out to the console. It would be much more beneficial if we could just write the code once and then use it again and again. Not only that, but the word print is much easier to read and understand than the code would be if we were to write out all of that code ourselves. Let’s take a look at how we can create some  functions:</p>
+
+
+<pre>def print_message():
+    print("Hello World!")
+
+print_message()</pre>
+
+
+<p>
+In the example, we have created a function definition. This defines what the function will do. The code that we use to define a function is as follows: <br>
+
+<strong>
+def:</strong> <br> This is the keyword that we use to tell Python that we are creating a function definition.
+print_message: This is the name that we’ve decided to give our function. Be sure to give your functions meaningful names so that when other people try to use your code, they’ll able to make sense of what the function does without having to read the code in the function.
+(): The parentheses denote the parameters that a function takes. In this example, we don’t have any parameters yet, but we’ll start adding some in soon.
+
+After all of this, we have the code inside of our function. The code inside the function is the actual logic that we wish to perform. In this instance, we just print out Hello World. Lastly, on line 4 we invoke that function which works in the same way that we used print(), only this time we don’t have arguments to pass as the function doesn’t take any parameters. Remove the code from line 4 and rerun the code to see what happens. Nothing, right? That’s because just defining the function. The function doesn’t do anything until we invoke or call it.</p>
+
+
+
+
+<h3>challenge def a funciton</h3>
+
+<p># Define the say_hello() function
+
+def say_hello():
+    return("Hello world!")
+    print("Hello world!")
+
+say_hello()</p>
+
+<h3>Params and arguments </h3>
+
+<p>Parameters and Arguments
+<br>Allows us to provide functions with data and context
+
+<br>We might need our functions to perform actions on specific pieces of data. In this case, we would use arguments to pass that part of data to the function
+
+
+</p>
+<p>
+The function that we created in the last example was called print_message, which then prints out Hello World. That’s all well and good, but what if we wanted to say hello to a user instead of saying Hello World. The problem is that our function doesn’t allow for that level of flexibility. One way around this would be to create a function for every name, but that would get very unwieldy, and the codebase would end up being massive! Instead we can use parameters. Parameters allow us to provide a function with input data that we want it to use. Let’s update our previous example to use a parameter to greet a user with:
+</p>
+
+<img src="assets/img/arguments.png" alt="">
+
+
+<p>Now we’ve updated our function to take a parameter of name, and we use that name to greet the user. At line 5 we call the print_message function by passing through an argument.
+
+A function's parameters are the special variables used by a function to handle this input, whereas the arguments are the values provided for the parameters when we run the function. For example, on line 1, we create a function that has a parameter named name, and then on line 5 we run that function and pass in the value of the variable username as the argument for that parameter</p>
+
+<p>We can also use optional parameters. Optional parameters will allow us to provide values to a function with some value in case they are not provided when the function is invoked. To do so, we use the assignment operator to set a value to the parameter when we are defining our function. In the example below, we have given the name parameter a default value of World:
+
+</p>
+
+<img src="assets/img/argument2.png" alt="">
+
+<p>We don’t provide an argument when we invoke the function as we do on line 5, the function will just print out Hello World. Notice that we initially stored the value in a variable called username, but inside the function, we’ve called in a name. This is because we’re passing a new variable to the function called name, with the value of username. The name variable cannot be accessed outside of the function. Therefore if we were to try to print name outside of the function, it wouldn’t work. This is known as variable scoping.
+
+</p>
+
+<h3>Parameters and Arguments - Required:
+</h3>
+<p>You might have noticed that all function definitions in Python end with a set of parentheses, like this: 
+</p>
+
+<pre>def some_function():
+    # Do something</pre>
+
+<p>Those parentheses aren't arbitrary. They're actually a sort of container into which we can "pass" arguments on which the function will execute its code. For example, if we wanted to write a function that adds two numbers, the two numbers we're adding together are the "arguments" to our function. Inside the function, they become parameters. We could define such a function like this:
+</p>
+
+<pre>def add_two_numbers(num1, num2):
+    return num1 + num2</pre>
+
+<p>Barring a couple of exceptions surrounding reserved words and keywords built into the Python language, it doesn't matter what you call the arguments in the parentheses, so long as you access them via those same names when referencing them in the function's code. So, let's see if you can write a function that takes in a couple of arguments!</p>
+
+<p>Your challenge is to:
+Define a function, product(), which takes two numbers, num1 and num2, as arguments, and returns their product.
+
+Requirements:
+Your function must return the product of the two numbers, not print it
+If you want to print the output, call your function and wrap the function call in the print() function as we've done in past challenges
+</p>
+
+<img src="assets/img/challengeproduct.png" alt="">
+
+
+<h3>Scoping</h3>
+<p>The scope of a variable
+
+determines the accessibility of a variable, Sometimes we’ll only need variables that are accessible within a function. In which case we’d just define the variable inside a function
+
+<br>Up until now, we’ve been working with the global scope which is the outermost level of a Python file. All of the variables that we declare in the global scope can be accessed inside a function. For example:
+
+</p>
+
+<pre><strong> my_global_variable = "World" </strong>
+^^^ this is global scope, same as javascript!
+as its outside of this function below! 
+def print_message():
+    print(f"Hello {my_global_variable}")
+
+print_message()</pre>
+
+
+<p>However, if we declare a variable inside a function, then that variable will not be accessible by the global scope so is known as the local scope.
+
+</p>
+
+<h4>local scope example</h4>
+
+
+<pre>def print_message():
+   <strong> my_local_variable = "World" </strong>
+    print("Hello %s" % my_local_variable)
+
+print_message()
+print(my_local_variable)</pre>
+
+</body></html>
