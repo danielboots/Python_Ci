@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Python</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+  
+<body>    
+
+<h1>Python:</h1>
+<p>Notes page 6</p>
+
+<h3>Collections - slicing lists</h3>
+
+<p>Slice Notation
+
+<br>Allows us to create sub-lists from lists
+
+<br>Sometimes we may only need a subset of a list, instead of a full list. In this case, we would use slice notation to chop up the list
+
+</p>
+<p>Lists are a great way of storing a collection of variables and objects, but what if you want to have more than just have a collection of strings? What if you wanted a list of lists? We can also create dictionaries and tuples. We can also create lists and dictionaries dynamically in a single line of code using list and dictionary comprehensions, respectively. And we’ll take a look at how to access values stored in each of the different types of collections and how to work with them with looping constructs.
+
+We can slice up lists to get subsets of a list. For example, if we wanted to get the first two items in a list, then we would do the following:</p>
+
+
+
+<img src="assets/img/slice.png" alt="">
+
+<p>Here we’ve added [0:2] to the end of our list which is called slice notation. It works like a combination of indexing and range. First, we indicate the index at which we wish to start. Then after the colon (:), we use the index at which we want to stop. Similar to the range function, the stop value is the everything up to, but not including, that value. Here it will, therefore, include everything up to index 2, except for index two itself. If we wanted to start at the very beginning of a list, we could just say [:2].
+
+</p>
+
+<p>Similarly, if we set a start value and don’t specify a stop value, it will just get everything all the way up to the end of the list.
+
+</p>
+
+
+<img src="assets/img/slice2.png" alt="">
+
+<p>And if we don’t provide a start or stop value, then it will just grab everything from the beginning, all the way to the end.
+
+</p>
+
+
+<img src="assets/img/slice3.png" alt="">
+
+<p>We would do this if we wanted to create a copy of a list.
+
+</p>
+
+<h3>range slicing</h3>
+<p>In addition to the start: stop values, we also have step. Again, this works in the same way as the range function.
+
+</p>
+
+<img src="assets/img/slice4.png" alt="">
+
+<p>Now we start at 0, stop at 4, and get there by stepping in 2s. If we wanted to reverse our list, for example, we would just do the following:
+
+</p>
+
+<pre>fruits = ["apple", "banana", "peach", "pear", "plum", "orange"]
+print(fruits[::-1])</pre>
+
+
+<h3>slicing lists challenge</h3>
+
+<img src="assets/img/rangechallenge.png" alt="">
+
+
+<h3>tuples</h3>
+<p>Provide us with another means of storing collections of data
+
+<br>Sometimes a list doesn’t accurately fulfil our needs; in which case, we would use tuples instead
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
