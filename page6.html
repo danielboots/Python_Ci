@@ -78,19 +78,187 @@ print(fruits[::-1])</pre>
 <br>Sometimes a list doesn’t accurately fulfil our needs; in which case, we would use tuples instead
 
 </p>
+p
+In addition to lists, we can also store information in tuples. We’ve seen these before when working with the print when we were formatting strings. Here’s a reminder!
+
+<img src="assets/img/tuples.png" alt="">
+
+<p>A tuple is denoted by the parentheses (). And the information contained within are the values of that tuple.
+
+NOTE: Tuples are not to be confused with function parameters or arguments.</p>
+
+
+<p>We can get values from tuples in the same way that we extract data from lists using indexes.
+
+</p>
+<img src="assets/img/tuples2.png" alt="">
+
+<p>So, if tuples work in pretty much the same way as lists, then why use them at all?
+
+When working with collections, one of the main reasons to use a list would be if you are storing pieces of information about many different things, and you would use tuples for storing different aspects of a single thing. For example, we might want to use a list to store a list of usernames:</p>
+
+
+<img src="assets/img/tuples3.png" alt="">
+
+
+<p>Another big difference between lists and tuples is that lists are mutable, whereas tuples are immutable.
+
+</p>
+
+<h3>what is the difference </h3>
+<p>A mutable object can be changed after it's created, and an immutable object can't. That said, if you're defining your own class, you can make its objects immutable by making all fields final and private. Strings can be mutable or immutable depending on the language.</p>
+
+
+<h3>tuples challenge.</h3>
+<h4>solution</h4>
+
+<img src="assets/img/tuplesol.png" alt="">
+
+<h3>Mutability and Immutability
+
+</h3>
+
+
+<p>Allows creation of data structures that can be modified, as well as others that cannot be changed
+
+</p>
+<p>For data that can be modified and updated; or are static values that will always remain the same
+
+</p>
+
+
+<p>So what’s the difference between something that’s mutable and something that’s immutable?
+
+Something that’s mutable is something that can be changed. Lists, for example, are mutable. Mutable means that it can be mutated and immutable implies that it cannot be mutated. Lists are likely to grow and change over time, and we can achieve this by using the .append() method. In the example below, we’ve added strawberry to our list of fruits using .append().</p>
+
+<img src="assets/img/imut.png" alt="">
+<p>Then when we print out the list, we can see that our list now contains strawberry.
+
+</p>
+
+
+<p>What if we wanted to ensure that our list is sorted alphabetically. Well, in that case, we’d just use the .sort() method.
+
+</p>
+
+<img src="assets/img/sortlist.png" alt="">
+
+<h3>delelting from the list</h3>
+
+<img src="assets/img/del.png" alt="">
+
+<p>Here we’ve deleted the first element from the fruits list, so it no longer contains apple.
+
+</p>
+
+<p>Tuples, however, are not mutable, meaning that they cannot be changed or modified and have a fixed size and fixed values. Therefore if we create a tuple containing two items, then it will always have two items. It cannot be changed. If we wanted to use the del keyword on an item in a tuple, then Python will complain.
+
+</p>
+
+
+<img src="assets/img/tuplecomplain.png" alt="">
+
+<p>Now Python is telling us that the ‘tuple’ object doesn’t support item deletion because a tuple is immutable and cannot be changed.
+
+</p>
+
+<img src="assets/img/stringlistim.png" alt="">
+
+
+<p>In this respect, strings are much more like tuples in Python, but in most programming languages, strings as immutable descendants of some list. But it is much easier to think of strings as a list of characters.
+
+</p>
+
+<h3>Mutability and Immutability challenge</h3>
+
+<p>In the last set of challenges you practiced some common operations on lists and tuples, namely indexing them and extracting subsets from them using slicing. In this respect, lists and tuples might have seemed almost identical, but they're not. As you might recall learning in the Mutability and Immutability lesson, lists are mutable (meaning they can be changed), and tuples are immutable (meaning they cannot be changed).
+
+In the code window, we've created a list of the numbers 1-10. We were attempting to take this list of numbers, loop through it with a while statement and change every number to its square, then print the list of the numbers' squares. Unfortunately we've made a mistake in our code and Python is returning an error when we click the run button. 
+</p>
+
+<p>Your challenge is to:
+Fix the error and ensure that the print() function on line 10 prints the list of the squares of the numbers 1-10
+</p>
+
+<p>solution: as tuples are immutable they cant be changed, so we need to change from brackets to square brackets in order to change from tuple to list.</p>
+
+<img src="assets/img/tuplechallengebracket.png" alt="">
+
+<h3>dictionaries</h3>
+<p>Provides with a means of storing data in a more meaningful way
+
+<br>Sometimes we need a more structured way of storing our information in a collection. To do this, we use dictionaries
+
+<br>Dictionaries allow us to take things a step further when it comes to storing information in a collection. Dictionaries will enable us to use what are called key/value pairs. When using a dictionary, we define our key/value pairs enclosed in curly braces ({}). After that, we use a string as our key or any other immutable data type. Then we use a colon to separate the key from the value, and then we have the value.
+
+<br>think JSON data, basically look the same, think MS2 i used this alot, JSON key value pairs and dictionaries... different names same idea.</p>
+
+<img src="assets/img/dictionary.png" alt="">
+
+<p>In this case, we have a dictionary called user. This dictionary has four keys (username, first_name, last_name, and age). Each of these keys has a value associated with it (“tombombadil”, “Tom”, “Bombadil”, 100).
+
+</p>
+
+<p>If we wish to access the values contained within the dictionary, we use a similar syntax to indexing in lists and tuples; only we use the string that we use for the key instead of a numeric value. For example, if we wanted to access the user’s age, then we would use the following syntax:
+
+</p>
 
 
 
 
 
+<p>this is really similar how i used jquery to access my JSON data,user["data"]</p> 
+<img src="assets/img/dictionaryaccess.png" alt="">
+
+<p>When working with dictionaries, instead of just getting each element, as we would with a list or tuple, we can get both keys and values from a dictionary. Unfortunately, creating the same kind of for loop that we would use to iterate over a list would just give us each key:
+
+</p>
+
+<img src="assets/img/items.png" alt="">
+
+<p>Note: Dictionaries don’t have any order, so the order that the keys get printed in may not match the order in which you defined them.
+
+But, what if we want the values associated with each of those keys? Then we’d simply use the square brackets like before.
+
+</p>
+
+<img src="assets/img/itemsbracket.png" alt="">
+
+<p>Now we’re passing the item value into the square brackets. Remember, an item is just a temporary variable that’s used within the scope of the for loop, and on each iteration, it will retrieve the next string that’s used as a key. It will print out the value for each of the key/value pairs contained in the dictionary.
+
+</p>
+
+<h3>part 4 dictionaries</h3>
+<p>If we needed access to both, keys, and values, we’d have to use a dictionary method called .items().
+
+</p>
+
+<img src="assets/img/keyvaldictionary.png" alt="">
+
+<p>Now we have defined to new variables in our for loop, key and value. These variables don’t need to be called key and value, but as the first variable will be the key and the second variable will the value, it’s considered to be a good convention. Then after that, we just print out the key and the value, with some nice formatting to denote each key/value with which we’re working.
+
+</p>
+
+<h3>dictionaries challenge</h3>
+<p>Dictionaries are like lists, but they have keys to identify the list items. Just like a real dictionary, where the word you're looking up is the key and the definition is the value, dictionaries in Python have keys and values. You can use a Python dictionary just like a real one, looking up the value of a key just as you would look up the definition of a word.
+
+One of the most common uses for dictionaries in Python is to store information about users on a website. In the code window we've written a small function, user_profile(), which currently returns nothing.
+
+Your challenge is to:
+Inside the function, define a dictionary, user_info, which contains information about a user named Alan.
+Return the dictionary from the function
+
+Requirements:
+The dictionary must have four keys: first_name, age, location, and date_joined
+The values for the keys should be Alan (a string), 36 (an integer), USA (a string) and Nov 12, 2016 (a string), respectively
+The keys and values must have the proper data types and be in the proper order in the dictionary
+</p>
 
 
+<h3>solution</h3>
+<p>note: bloody commas, end of the dictionary remmeber to make sure no commas or thing is fucked!</p>
 
-
-
-
-
-
+<img src="assets/img/dictionarysolution.png" alt="">
 
 
 
