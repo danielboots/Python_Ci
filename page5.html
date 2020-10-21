@@ -148,4 +148,115 @@ print_message()</pre>
 print_message()
 print(my_local_variable)</pre>
 
+
+
+
+
+<p>As we can see, Python will throw an error when we try to use my_local_variable outside of the function. We should generally avoid using a global variable. In the examples that we’re covering here, it’s a little more challenging to avoid them, plus we’re only writing simple scripts to help provide an understanding of how the language works. There are some techniques that a developer would use to help build a better, more scalable application using design patterns, but that’s outside the scope of this lesson. For now, though, we’ll use the global scope and avoid it where possible.
+
+</p>
+
+
+
+<h3>scoping challenges</h3>
+<p>Scoping - Required:
+In the Scoping units you learned that there are two different scopes in Python: global scope and local scope. A variable defined in the global scope can be accessed in any functions also defined in the same scope, while a variable defined inside a function can only be accessed inside that function, since its scope is local to the function itself. If you try to access a local variable outside of the scope it's defined in, you'll get an error message explaining that the variable isn't defined.
+
+To demonstrate the use of local and global scopes, in this challenge you're going to define a function that utilizes both.</p>
+
+<p>Your challenge is to:
+Declare a global variable, my_global_num, which has an integer value of 10. 
+Define a function, add_ten(), which takes no parameters
+Inside the add_ten() function, declare a local variable, my_local_num, which has an integer value of 5
+Return the sum of my_global_num and my_local_num from your add_ten() function
+
+Requirements:
+Your function should return the sum of your global and local variables
+Your function must not take any parameters</p>
+
+<h3>solution</h3>
+<img src="assets/img/scope.png" alt="">
+
+
+<h3>Abstraction</h3>
+<p>Abstraction allows us to hide complex or monotonous actions or pieces of code that are prone to change into functions
+
+<br>Using functions to abstract pieces makes it easier to reuse code and concepts.
+
+<br>Aside from the ability to reuse code over and over again, functions allow us to build layers of abstraction. One of the perks is that we only need to update our code in one place and those changes will be propagated throughout a more extensive system. We can use functions to abstract some tasks into functions, meaning when we wish to change something, we can change it one place (the function definition), instead of everytime we use that piece of code. An example of this would be, in Python 2, they used a print keyword instead of a print function, and the raw_input function instead of the input function. Let’s have a look at what this would have looked like:
+
+</p>
+
+<pre>name = raw_input("Input your name:")
+age = raw_input("Input your age:")
+
+print "Your name is %s" % name
+print "You are %s years old" % age</pre>
+
+<p>Now if we wanted to re-write this code in Python 3, we would have to change each of the print keywords and the raw_input function:
+
+</p>
+<pre>name = input("Input your name:")
+age = input("Input your age:")
+
+print("Your name is %s" % name)
+print("You are %s years old" % age)</pre>
+
+<p>Or, what we could do is hide the actual input and output in functions, which means that we’ll only need to update them once. In Python 2, we would have:
+
+
+</p>
+
+
+<pre>def get_user_input(prompt):
+    return raw_input(prompt)
+
+
+def print_out_to_console(value_to_be_printed):
+    print value_to_be_printed
+
+name = get_user_input("Input your name:")
+age = get_user_input("Input your age:")
+
+print_out_to_console("Your name is %s" % name)
+print_out_to_console("You are %s years old" % age)</pre>
+
+<p>Then when we update to Python 3, we would have:
+
+</p>
+
+<img src="assets/img/abstraction.png" alt="">
+
+
+<p>The overall solution is admittedly more verbose, but it means that we have much less work to do when we need to update our code in the future. As codebases grow and grow, learning to use functions to abstract areas of code that are likely to change will make life much easier in the long run!
+
+</p>
+
+
+<h3>Benefits of functions </h3>
+<p>As you're probably starting to realize, functions can drastically help us to reduce the length of our code. In any programming language, if you find yourself copying and pasting a lot or repeating the same lines of code over and over again with only slight changes, it's a good indication that the code could be extracted out into a function in order to reduce the repetition.
+
+In the code window we've defined a function, annoying_function(), which prints out four messages. If you look at the code, you can see that the only thing that changes between these messages is the sequence of words between "is" and "message". This is a very good indication that this sequence of words could become a variable or a parameter to a different, more efficient function. 
+
+Your challenge is to:
+Define a function, better_function(), which takes a single parameter, missing_words, which is a string
+When your function is called, it should take missing_words (e.g. "a", "another", "yet another", or "the final") as a string and return the same respective message as in the annoying_function().</p>
+
+
+<h3>solution </h3>
+<p>this one was a tricky one with f strings, we need to make sure its written correct like this</p>
+<pre>def better_function(missing_words):
+    return (f'Hello! This is {missing_words} message!')</pre>
+
+<p>however solution below.</p>
+
+<img src="assets/img/funcsol.png" alt="">
+
+<h3>using modules:</h3>
+
+
+
+
+
+
 </body></html>
